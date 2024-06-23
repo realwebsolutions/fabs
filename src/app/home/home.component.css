@@ -1,0 +1,29 @@
+
+h1{
+    font-family: "Trade Winds", system-ui;
+    font-style: normal;
+    font-size: 32px;
+}
+svg{
+    height: 50vh;
+}
+.container-fluid{
+    width: auto;
+    background-image: url('../../../public/men.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+@media (max-width: 500px) {
+svg{
+    width: 300px;
+    height: auto;
+
+}
+h1{
+    margin-top: 0;
+font-size: 16px;
+}
+
+}
+  
