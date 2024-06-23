@@ -10,8 +10,8 @@ import gsap from 'gsap';
 })
 export class HomeComponent  implements OnInit {
 ngOnInit(): void {
-  gsap.from('path',1.5, {
-    y:700,
+  gsap.from('.vh-100',1.5, {
+    opacity: 0,
     stagger:
     {
       amount: 0.5
@@ -19,23 +19,6 @@ ngOnInit(): void {
     ease:'power1.inOut'
   });
 
-
-  gsap.from('image',1.5, {
-    y:700,
-    stagger:
-    {
-      amount: 0.5
-    },
-    ease:'power1.inOut'
-  });
-  gsap.from('.display-4',1.5, {
-    y:700,
-    stagger:
-    {
-      amount: 0.5
-    },
-    ease:'power1.inOut'
-  });
-  }
+}
 
 }
