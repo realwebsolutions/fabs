@@ -1,14 +1,43 @@
-<button (click)="startLoading()" [disabled]="isLoading">Start Loading</button>
+<section class="hero text-white">
+  <div class="pre-loader">
+    
+    <div class="counter">
+      <div class="digit-1" #digit1>
+        <div class="num">0</div>
+        <div class="num offset">1</div>
+      </div>
+      <div class="digit-2" #digit2>
+        <div class="num">0</div>
+        <div class="num offset">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div>
+        <div class="num">0</div>
+      </div>
+      <div class="digit-3" #digit3>
+        <div class="num">0</div>
+        <div class="num">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div>
+        <div class="num">0</div>
 
-<div *ngIf="isLoading" class="loader-container">
-  <div class="loader-text">{{ progress }}%</div>
-</div>
+      </div>
+      <div class="digit-4">%</div>
 
-<div *ngIf="isCarouselVisible" #carousel class="carousel">
-    <div class="slide" #slide> <img src="/1.png" alt="" srcset=""> </div>
-    <div class="slide" #slide> <img src="/2.png" alt="" srcset=""> </div>
-    <div class="slide" #slide> <img src="/3.png" alt="" srcset=""> </div>
-    <div class="slide" #slide> <img src="/4.png" alt="" srcset=""> </div>
-    <div class="slide" #slide> <img src="/5.png" alt="" srcset=""> </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
 
-</div>
+</section>
+<div></div>

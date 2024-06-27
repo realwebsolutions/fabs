@@ -1,65 +1,61 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ViewChild, ElementRef, viewChild, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import gsap from 'gsap';
-import { interval, take } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loading',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './loading.component.html',
-  styleUrl: './loading.component.css'
+  styleUrls: ['./loading.component.css']
 })
+export class LoadingComponent implements OnInit, AfterViewInit {
+  @ViewChild('digit1') digit1!: ElementRef;
+  @ViewChild('digit2') digit2!: ElementRef;
+  @ViewChild('digit3') digit3!: ElementRef;
+  constructor(private router: Router) { }
+  numAnimation = (digit: ElementRef, duration: number, delay = .5) => {
+    const numHeight = digit.nativeElement.querySelector(".num").clientHeight;
+    const totalDistance =
+      (digit.nativeElement.querySelectorAll(".num").length - 1) * numHeight;
+    gsap.to(digit.nativeElement, {
+      y: -totalDistance,
+      duration: duration,
+      delay: delay,
+      ease: 'power1.inOut',
+      
+    });
+    
+    gsap.to('.progress-bar',{
+      width:'30%',
+      duration: 2,
+      ease:'power4.inOut',
+      delay:7,
 
-  export class LoadingComponent implements OnInit {
-    progress = 0;
-    isLoading = false;
-    isCarouselVisible = false;
-  
-    ngOnInit() {
-      this.initCarousel();
+    });
+    gsap.to('.progress-bar',{
+      width:'100%',
+      opacity: 0,
+      duration: 2,
+      delay: 8.5,
+      ease:'power3.inOut',
+      onComplete:()=>{
+        gsap.set('.pre-loader',{
+          display:'none',
+          
+        });
+      
+      }
 
-    }
-  
-    startLoading() {
-      this.isLoading = true;
-      interval(15).pipe(
-        take(101)
-      ).subscribe(
-        (value) => {
-          this.progress = value;
-        },
-        (error) => console.error(error),
-        () => {
-          console.log('Loading complete');
-          this.isLoading = false;
-          this.isCarouselVisible = true;
-        }
-      );
-    }
-  
- 
-      @ViewChildren('slide') slides!: QueryList<ElementRef>;
-    
-    
-    
-      ngAfterViewInit() {
-        this.slides.changes.subscribe(() => {
-          this.initCarousel();
-        });
-      }
-    
-      initCarousel() {
-        const slides = this.slides.toArray().map(slide => slide.nativeElement);
-    
-        gsap.to(slides, {
-          x: '-1000',
-          ease: 'none',
-          stagger: {
-            each: 1,
-            from: 'start',
-            grid: 'auto'
-          }
-        });
-      }
-    }
+    })
+  }
+
+  ngOnInit() { }
+
+  ngAfterViewInit() {
+    this.numAnimation(this.digit3, 5);
+    this.numAnimation(this.digit2, 6);
+    this.numAnimation(this.digit1, 2, 5);
+  }
+}

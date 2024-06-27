@@ -1,3 +1,14 @@
-<!-- <router-outlet ></router-outlet>  -->
-<app-loading></app-loading>
-<app-image-carousel></app-image-carousel>
+<router-outlet></router-outlet> 
+<div class="side-navbar text-center">
+    <button class="menu-button" (click)="toggleNavbar()"><span class="box-side">[ </span>Menu<span class="box-side"> ]</span></button>
+    @if (isOpen) {
+    <nav class="navbar ">
+        <ul >
+            <li class="nav-item"><a class="nav-link active" href="#" ><span class="box-side">[ </span>Fab Studio<span class="box-side"> ]</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#"><span class="box-side">[ </span>Services<span class="box-side"> ]</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" ><span class="box-side">[ </span>About Us<span class="box-side"> ]</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#"><span class="box-side">[ </span>Contact<span class="box-side"> ]</span></a></li>
+          </ul>
+    </nav>
+}
+  </div>

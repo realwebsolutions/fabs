@@ -1,3 +1,6 @@
+@if (!isLoading){
+
+  
 <div class="container-fluid vh-100 bg-black text-center text-white">
   
     
@@ -31,4 +34,9 @@
       </div>
     </div> 
   </div>
+}
+  @if (isLoading){
+    <app-loading ></app-loading>
+  }
+
   

@@ -1,0 +1,67 @@
+ .side-navbar {
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s ease-out;
+  }
+  ul{
+    list-style-type: none;
+
+  }
+  .side-navbar.open {
+    transform: translateX(0);
+  }
+ 
+  .menu-button {
+    font-family: 'Stick No Bills', sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+   nav {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+   }
+  nav a {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 28px;
+
+  }
+  .nav-link span {
+    visibility: hidden;
+  }
+  button span{
+    visibility: hidden;
+
+  }
+  button:hover span{
+    visibility: visible;
+
+  }
+  .nav-link:hover span {
+    visibility: visible;
+  }
+
+  @media (max-width : 500px){
+    nav a {
+        font-size: 12px;
+    
+      }
+      .menu-button {
+        font-size: 12px;
+      
+    }
+    nav {
+        top: 20px;}
+  }
