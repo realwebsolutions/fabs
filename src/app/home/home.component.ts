@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const numHeight = digit.nativeElement.querySelector(".num").clientHeight;
     const totalDistance =
       (digit.nativeElement.querySelectorAll(".num").length - 1) * numHeight;
-    
+
     return gsap.to(digit.nativeElement, {
       y: -totalDistance,
       duration: duration,
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   progressBarAnimation() {
-    gsap.set(".home-cont",{
+    gsap.set(".home-cont", {
       display: "none",
     })
     const tl = gsap.timeline();

@@ -1,104 +1,144 @@
+h1 {
+  font-family: "Trade Winds", system-ui;
+  font-style: normal;
+  font-size: 32px;
+}
 
-h1{
-    font-family: "Trade Winds", system-ui;
-    font-style: normal;
-    font-size: 32px;
+svg {
+  height: 50vh;
 }
-svg{
-    height: 50vh;
-}
-.container-fluid{
-    width: auto;
-    background-image: url('../../../public/men.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.container-fluid {
+  width: auto;
+  background-image: url('../../../public/men.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 
 }
+
 @media (max-width: 500px) {
-svg{
+  svg {
     width: 300px;
     height: auto;
 
-}
-h1{
+  }
+
+  h1 {
     margin-top: 0;
-font-size: 16px;
-}
+    font-size: 16px;
+  }
 
 }
+
 /* loading screen */
-.hero{
-    width: 100vw;
-    height: 100vh;
-    padding: 3em;
-  }
-  .pre-loader{
-    width: 200%;
-    height: 100%;
-    padding: 2em;
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.hero {
+  width: 100vw;
+  height: 100vh;
+  padding: 3em;
+}
+
+.pre-loader {
+  width: 200%;
+  height: 100%;
+  padding: 2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5em;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.pre-loader p {
+  width: max-content;
+  text-transform: uppercase;
+  font-family: "Thimmons NY";
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.counter {
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+  font-family: "Thimmons NY";
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 150px;
+  clip-path: polygon(0, 0, 100% 0, 100% 100px, 0 100px);
+}
+
+.digit-1,
+.digit-2,
+.digit-3,
+.digit-4 {
+  position: relative;
+  top: -15px;
+}
+
+.offset {
+  position: relative;
+  right: -7.5px;
+}
+
+.progress-bar {
+  position: relative;
+  top: -15px;
+  width: 0%;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+}
+
+section {
+  background-color: rgb(0, 0, 0);
+}
+
+.gradient-button {
+  background: linear-gradient(90deg, #202020 0%, #717171 50.5%, #2F2F2F 100%);
+  border: none;
+  border-radius: 17.5px;
+  /* This makes the button circular */
+  color: white;
+  /* Assuming you want white text */
+  /* Adjust padding to control size */
+  font-size: 16px;
+  /* Adjust as needed */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  font-family: 'Stick No Bills', sans-serif;
+}
+
+.gradient-button:hover {
+  transform: scale(1.05);
+  /* Optional: adds a slight grow effect on hover */
+}
+
+@media(max-width: 900px) {
+  .pre-loader {
+    padding: 1em;
     gap: 0.5em;
-    overflow: hidden;
-    z-index: 2;
   }
-  .pre-loader p{
-    width: max-content;
-    text-transform: uppercase;
-    font-family: "Thimmons NY";
-    font-size: 60px;
-    line-height: 60px;
+
+  .counter {
+    font-size: 70px;
   }
-  .counter{
-    height: 100px;
-    display: flex;
-    overflow: hidden;
-    font-family: "Thimmons NY";
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 150px;
-    clip-path: polygon(0,0,100% 0,100% 100px,0 100px);
+
+  .pre-loader p {
+    font-size: 28px;
+    line-height: 64px;
   }
-  .digit-1,
-  .digit-2,
-  .digit-3,
-  .digit-4{
+
+  .offset {
     position: relative;
-    top: -15px;
-  } 
-  .offset{
-    position: relative;
-    right: -7.5px;
+    right: -5px;
   }
-  .progress-bar{
-    position: relative;
-    top: -15px;
-    width: 0%;
-    height: 4px;
-    background-color: rgb(255, 255, 255);
-  }
-  section{
-    background-color: rgb(0, 0, 0);
-  }
-  @media(max-width: 900px){
-    .pre-loader{
-      padding: 1em;
-      gap: 0.5em;
-    }
-    .counter{
-      font-size: 70px;
-    }
-    .pre-loader p{
-      font-size: 28px;
-      line-height: 64px;
-    }
-    .offset{
-      position: relative;
-      right: -5px;
-    }
-  }
-  
+}

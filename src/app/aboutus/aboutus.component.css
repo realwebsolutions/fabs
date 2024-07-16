@@ -1,0 +1,40 @@
+
+.container-fluid {
+  min-height: 100vh;
+
+
+}
+.bg-img{
+    background-image: url('../../../public/aboutus_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+}
+h1{
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: 700;
+}
+ h2, p {
+    font-family: "Saira", sans-serif;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media(max-width:500px){
+    .bg-img{
+    background-size: contain;
+
+    }
+}
