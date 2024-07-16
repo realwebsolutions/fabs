@@ -1,12 +1,54 @@
-@if (!isLoading){
+<!-- Loading Screen -->
 
-  
-<div class="container-fluid vh-100 bg-black text-center text-white">
-  
+<section class="hero text-white">
+  <div class="pre-loader">
     
+    <div class="counter">
+      <div class="digit-1" #digit1>
+        <div class="num">0</div>
+        <div class="num offset">1</div>
+      </div>
+      <div class="digit-2" #digit2>
+        <div class="num">0</div>
+        <div class="num offset">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div>
+        <div class="num">0</div>
+      </div>
+      <div class="digit-3" #digit3>
+        <div class="num">0</div>
+        <div class="num">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div>
+        <div class="num">0</div>
+
+      </div>
+      <div class="digit-4">%</div>
+
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+</section>
+ 
+  <!-- Home Component -->
+
+<div class="container-fluid vh-100 bg-black text-center text-white home-cont">
    <div class="row ">
-      <div class="col-md ">
-        <svg width="900" height="552"  viewBox="0 0 542 250" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <div class="col-md " class="svg">
+        <svg #mySvg width="900" height="552"  viewBox="0 0 542 250" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g style="mix-blend-mode:luminosity" opacity="0.6">
             <path d="M103.149 77.8623H170.898V124.005H158.203C136.149 124.005 121.094 120.546 113.037 113.629C106.445 107.932 103.149 98.7363 103.149 86.041V77.8623ZM16.3574 77.8623H82.0312V144.757H130.981V176.617H82.0312V243.756H16.3574V77.8623ZM279.614 77.8623H290.601C320.549 77.8623 338.411 87.9941 344.189 108.258C346.143 114.931 347.119 122.581 347.119 131.207V244H279.614V77.8623ZM189.526 131.207C189.526 113.222 193.636 100.038 201.855 91.6562C210.889 82.4603 225.618 77.8623 246.045 77.8623H257.031V244H189.526V131.207ZM500.146 159.894C515.69 166.323 523.462 177.838 523.462 194.439C523.462 209.658 518.132 221.62 507.471 230.328C496.322 239.443 480.493 244 459.985 244H448.755V77.8623H458.154C478.174 77.8623 493.473 82.8672 504.053 92.877C513.737 101.992 518.579 113.832 518.579 128.399C518.579 142.885 512.557 153.383 500.513 159.894H500.146ZM362.817 77.8623H428.491V243.756H362.817V77.8623Z" fill="url(#paint0_linear_7_189)"/>
             <g style="mix-blend-mode:overlay">
@@ -33,10 +75,8 @@
         <h1 class="mt-3 display-4">Experience the Transformation</h1>
       </div>
     </div> 
-  </div>
-}
-  @if (isLoading){
-    <app-loading ></app-loading>
-  }
+</div>
+
+
 
   
