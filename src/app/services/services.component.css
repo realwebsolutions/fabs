@@ -1,0 +1,35 @@
+h1{
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: 700;
+}
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 200px; 
+    width: 200px;
+  }
+  .card :hover{
+    scale: 1.1;
+  }
+  .row > *{
+    width: auto;
+  }
+
+  .card-img-top {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-title {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .btn-outline-light {
+    border-radius: 0;
+  }
