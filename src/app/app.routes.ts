@@ -5,16 +5,19 @@ import { ServicesComponent } from './services/services.component';
 import { HairComponent } from './services/hair/hair.component';
 import { FaceComponent } from './services/face/face.component';
 import { BeardComponent } from './services/beard/beard.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 export const routes: Routes = [
 
-    // { path:'', redirectTo: 'home', pathMatch:"full"},
+    { path:'', redirectTo: 'home', pathMatch:"full"},
     { path: 'home', component: HomeComponent},
    { path: 'aboutus', component: AboutusComponent},
    { path: 'services', component: ServicesComponent},
    { path: 'hair', component: HairComponent},
    { path: 'face', component: FaceComponent},
    { path: 'beard', component: BeardComponent},
+   { path: 'contactus', component: ContactusComponent},
+
 
 
 
