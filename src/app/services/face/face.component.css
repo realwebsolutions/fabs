@@ -1,30 +1,30 @@
 .container {
-    max-width: 600px;
-  }
-  
-  ul {
-    font-family: 'Stick No Bills', sans-serif;
+  max-width: 600px;
+}
 
-    padding: 0;
-    list-style-type: none;
-    font-size: 1.2em;
-  }
-  
-  li {
-   font-size: 28px;
+ul {
+  font-family: 'Stick No Bills', sans-serif;
 
-    padding: 5px 0;
-  }
-  .box-side {
-    visibility: hidden;
-  }
-  
-  li:hover .box-side {
-    visibility: visible;
-  }
-  
-  
-  .bg-dark {
-    background-color: #000 !important;
-  }
-  
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.2em;
+}
+
+li {
+  font-size: 28px;
+
+  padding: 5px 0;
+}
+
+.box-side {
+  visibility: hidden;
+}
+
+li:hover .box-side {
+  visibility: visible;
+}
+
+
+.bg-dark {
+  background-color: #000 !important;
+}

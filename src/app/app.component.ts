@@ -8,15 +8,15 @@ import { BeardComponent } from "./services/beard/beard.component";
 import { HairComponent } from "./services/hair/hair.component";
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
-    imports: [RouterOutlet, RouterLink,RouterLinkActive, RouterOutlet, AboutusComponent, ServicesComponent, HomeComponent, FaceComponent, BeardComponent, HairComponent]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, RouterOutlet, AboutusComponent, ServicesComponent, HomeComponent, FaceComponent, BeardComponent, HairComponent]
 })
 export class AppComponent {
   title = 'fab';
-  isOpen =false;
+  isOpen = false;
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -26,5 +26,5 @@ export class AppComponent {
   }
   toggleNavbar() {
     this.isOpen = !this.isOpen;
-}
+  }
 }
