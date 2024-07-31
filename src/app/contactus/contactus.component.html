@@ -1,0 +1,24 @@
+<div class="contact-us">
+    <div class="container text-center">
+        <h2>Contact</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/aboutus_bg.png" alt="">
+            </div>
+            <div class="col-md-6 rounded-3" id="box">
+                <form class="text-center" [formGroup]="messageform" (ngSubmit)="sendmessage(messageform.value)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" formControlName="name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone number" formControlName="phone"/>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" placeholder="Message" formControlName="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

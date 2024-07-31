@@ -6,13 +6,14 @@ import { HomeComponent } from "./home/home.component";
 import { FaceComponent } from "./services/face/face.component";
 import { BeardComponent } from "./services/beard/beard.component";
 import { HairComponent } from "./services/hair/hair.component";
+import { ContactusComponent } from "./contactus/contactus.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, RouterOutlet, AboutusComponent, ServicesComponent, HomeComponent, FaceComponent, BeardComponent, HairComponent]
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, RouterOutlet, AboutusComponent, ServicesComponent, HomeComponent, FaceComponent, BeardComponent, HairComponent, ContactusComponent]
 })
 export class AppComponent {
   title = 'fab';
