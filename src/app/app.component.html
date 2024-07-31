@@ -6,13 +6,13 @@
 
   <div class="container  bg-black vw-100 " id="box">
     <ul class="mt-5 text-white ">
-      <li class="nav-item "><a class="nav-link active" href="#"><span class="box-side">[ </span>Fab Studio<span
+      <li class="nav-item "><a class="nav-link active" routerLink="/home" ><span class="box-side" >[ </span>Fab Studio<span
             class="box-side"> ]</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="#"><span class="box-side">[ </span>Services<span
+      <li class="nav-item"><a class="nav-link active" routerLink="/services" ><span class="box-side">[ </span>Services<span
             class="box-side"> ]</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="/aboutus"><span class="box-side">[ </span>About Us<span
+      <li class="nav-item"><a class="nav-link active" routerLink="/aboutus" ><span class="box-side">[ </span>About Us<span
             class="box-side"> ]</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="#"><span class="box-side">[ </span>Contact<span
+      <li class="nav-item"><a class="nav-link active" routerLink="" ><span class="box-side">[ </span>Contact<span
             class="box-side"> ]</span></a></li>
     </ul>
     <img src="/Subtract.png" alt="bottom left" class="bottom-left-image">
@@ -22,6 +22,7 @@
 
   }
 </div>
-<!-- <app-services></app-services> -->
+<router-outlet></router-outlet>
+
 <!-- <app-home></app-home> -->
 
